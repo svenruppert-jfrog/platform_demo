@@ -1,0 +1,14 @@
+resources:
+  - name: platform_demo_gitrepo
+    type: GitRepo
+    configuration:
+      gitProvider: github_sven_jfrog
+      path: svenruppert-jfrog/platform_demo
+
+  # Build info for the application
+  - name: platform_demo_build_info
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: artifactory
+      buildName: platform_demo_build
+      buildNumber: 1

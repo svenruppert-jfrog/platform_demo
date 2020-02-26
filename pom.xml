@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.rapidpm</groupId>
+    <artifactId>rapidpm-dependencies</artifactId>
+    <version>04.07.00-alpha-b2</version>
+  </parent>
+
+  <groupId>org.rapidpm.tutorial.jfrog</groupId>
+  <artifactId>platform_demo</artifactId>
+  <version>1.0.0-alpha</version>
+
+  <inceptionYear>2020</inceptionYear>
+  <organization>
+    <name>JFrog</name>
+    <url>http://www.jfrog.com</url>
+  </organization>
+  <url>https://github.com/svenruppert-jfrog/platform_demo/</url>
+
+
+  <scm>
+    <url>https://github.com/svenruppert-jfrog/platform_demo/</url>
+    <connection>
+      scm:git:https://github.com/svenruppert-jfrog/platform_demo/.git
+    </connection>
+    <developerConnection>
+      scm:git:https://github.com/svenruppert-jfrog/platform_demo/
+    </developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+  <developers>
+    <developer>
+      <name>Sven Ruppert</name>
+      <email>sven.ruppert@gmail.com</email>
+      <roles>
+        <role>Developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+  </developers>
+  <issueManagement>
+    <system>Github</system>
+    <url>
+      https://github.com/svenruppert-jfrog/platform_demo//issues
+    </url>
+  </issueManagement>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A business-friendly OSS license</comments>
+    </license>
+  </licenses>
+
+  <properties>
+    <platform-ip>35.223.54.149:8082</platform-ip>
+    <deploy-repo-url>http://${platform-ip}/artifactory/team1-mvn-prod-us/</deploy-repo-url>
+    <deploy-repo-snapshots-url>http://${platform-ip}/artifactory/team1-mvn-staging-us/</deploy-repo-snapshots-url>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <jdk.version>11</jdk.version>
+    <jetty.version>9.4.26.v20200117</jetty.version>
+  </properties>
+
+  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>libs-release</name>
+      <url>http://35.223.54.149:8082/artifactory/team1-mvn/</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+      <id>snapshots</id>
+      <name>libs-snapshot</name>
+      <url>http://35.223.54.149:8082/artifactory/team1-mvn/</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>libs-release</name>
+      <url>http://35.223.54.149:8082/artifactory/team1-mvn/</url>
+    </pluginRepository>
+    <pluginRepository>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+      <id>snapshots</id>
+      <name>libs-snapshot</name>
+      <url>http://35.223.54.149:8082/artifactory/team1-mvn/</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <dependencies>
+
+  </dependencies>
+
+</project>

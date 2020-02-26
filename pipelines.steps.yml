@@ -1,0 +1,40 @@
+pipelines:
+  - name: pipeline_platform_demo
+    configuration:
+      environmentVariables:
+        readOnly:
+          MY_MESSAGE: '"Hello World!"'
+    steps:
+      - name: step_1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: platform_demo_gitrepo
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo “running CI for master”
+
+
+      - name: build_platform_demo_test
+        type: MvnBuild
+        configuration:
+          sourceLocation: .
+          mvnCommand: clean test
+#          configFileLocation: .
+#          configFileName: mvn-art-config
+          inputResources:
+            - name: platform_demo_gitrepo
+          integrations:
+            - name: artifactory
+          runtime:
+            type: image
+            image:
+              auto:
+                language: java
+                versions:
+                  - "11"
+        execution:
+          onStart:
+            - javac -version
+            - mvn --version
