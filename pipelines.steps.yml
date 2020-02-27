@@ -21,8 +21,8 @@ pipelines:
         configuration:
           sourceLocation: .
           mvnCommand: clean test
-#          configFileLocation: .
-#          configFileName: mvn-art-config
+          configFileLocation: "."
+          configFileNam: "pom.xml"
           inputResources:
             - name: platform_demo_gitrepo
           integrations:
