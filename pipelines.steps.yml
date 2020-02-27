@@ -22,7 +22,7 @@ pipelines:
           sourceLocation: .
           mvnCommand: clean test
           configFileLocation: "."
-          configFileNam: "pom.xml"
+          configFileName: "pom.xml"
           inputResources:
             - name: platform_demo_gitrepo
           integrations:
