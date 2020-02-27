@@ -9,6 +9,8 @@ resources:
   - name: platform_demo_build_info
     type: BuildInfo
     configuration:
+      configFileLocation: "."
+      configFileNam: "pom.xml"
       sourceArtifactory: artifactory
       buildName: platform_demo_build
       buildNumber: 1
